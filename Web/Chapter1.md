@@ -121,3 +121,5 @@ Go to these sites and try some questions. Do not be discouraged if you cannot so
 * [CTF Checklist](https://fareedfauzi.gitbook.io/ctf-checklist-for-beginner/web)
 * [List of useful payloads](https://github.com/swisskyrepo/PayloadsAllTheThings)
 * [Hash payloads](https://github.com/danielmiessler/SecLists)
+* [wechall.net](https://www.wechall.net/active_sites)
+* [wechall challenges](https://www.wechall.net/challs/)
