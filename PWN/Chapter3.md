@@ -1,4 +1,4 @@
-# **Chapter 2: Simple Reverse Engineering**
+# **Chapter 2: PWN**
 
 ## Introduction
 
@@ -14,21 +14,7 @@ A [disassembler](https://ctf101.org/reverse-engineering/what-are-disassemblers/)
 
 Assembly language is a low-level programming language that is used to write instructions for a computer's processor. It is a symbolic representation of machine code, which consists of a series of binary digits that the processor can understand and execute. Each assembly instruction corresponds to a specific machine code instruction, so when an assembly program is compiled, the assembly instructions are translated into machine code that the processor can execute. We will be going through x86-64 assembly, which is the most common assembly language used in modern computers.
 
-We will see some Assembly commands for some simple code, which is written in C++ (should be similar to Java). However, before going through the examples, we should go through some of the memory management in a program.
-
-### Program Stack
-
-A program stack is a data structure that is used by a computer program to store temporary data during the execution of the program. It is called a "stack" because it operates on the principle of Last In First Out (LIFO), which means that the last item added to the stack will be the first one to be removed.
-In a program, the stack is used to store a variety of information, such as function arguments, local variables, and return addresses. When a program calls a function, the function's arguments and local variables are pushed onto the stack, and when the function returns, the return value and the previous state of the program are popped off the stack.
-The stack is an important part of a computer's memory management system, as it allows a program to store and retrieve data in a very efficient way. It is a fundamental concept in computer science, and is used in many different types of programs and systems.
-
-### Base Pointer
-
-The base pointer  is a special pointer that points to the base of the current stack frame. A stack frame is a section of the program stack that is used to store data for a specific function or procedure.
-
-The base pointer is used to keep track of the current position in the stack, and it is typically used to access the data stored in the stack frame. It is often used in conjunction with other pointers, such as the stack pointer and the instruction pointer, to control the flow of a program and to access data in the stack.
-
-The base pointer is typically set to the address of the bottom of the current stack frame when a function is called, and it is adjusted as the function pushes and pops data onto and off of the stack. It is also used to keep track of the location of local variables and function arguments within the stack frame, which makes it easier for the program to access this data.
+We will see some Assembly commands for some simple code, which is written in C++ (should be similar to Java).
 
 ### Simple Addition
 
