@@ -1,4 +1,4 @@
-# **Chapter 1: Simple Web Exploitation**
+# Chapter 1: Simple Web Exploitation
 
 ## Introduction
 
@@ -10,10 +10,9 @@ HTML, CSS, and JavaScript are the three main languages used in web development. 
 
 ## Dev Tools
 
-Pressing Ctrl + Shift + I will allow you to see the Dev Tools of your browser
+Pressing Ctrl + Shift + I will allow you to see the Dev Tools of your browser.
 
-![An Image of Inspector](Images/Inspector.png)
-*Firefox Dev Tools*
+<figure><img src="Images/Inspector.png" alt=""><figcaption><p><em>Firefox Dev Tools</em></p></figcaption></figure>
 
 One can see multiple tabs, with most of them being useful in someway for CTFs. As a result, we will go through some of them and how they can be used.
 
@@ -21,18 +20,17 @@ One can see multiple tabs, with most of them being useful in someway for CTFs. A
 
 The Inspector menu allows one to see the HTML and CSS (and JS in script tags) of the webpage you are at. An extension of the HTML can be found in Page Source by pressing Ctrl + U. Both of these will allow us to find any hidden flags in the HTML, which could be in the comments. Comments could also contain hints to solve challenges. It will also allow us to find any hidden elements or links that could possibly lead to more vulnerabilities. Seeing the source or directory path of the link itself can reveal information regarding the directory structure of the website. This can be used to find hidden directories or files that could contain flags. Inspecting elements can save a lot of time in understanding what and how it's displaying what it is and can also a great way to zero in sections of code.
 
-![An Image of flag](Images/Flag.png)
-*[Example of flag in Page Source](https://ctfacademy.github.io/web/challenge1/index.htm)*
+&#x20;[_Example of flag in Page Source_](https://ctfacademy.github.io/web/challenge1/index.htm)
+
+<figure><img src="Images/Flag.png" alt=""><figcaption></figcaption></figure>
 
 ### Debugger / Sources
 
-![An Image of Debugger](Images/Debugger.png)
-*Firefox Debugger*
+![An Image of Debugger](Images/Debugger.png) _Firefox Debugger_
 
 The debugger allows developers to debug their JavaScript code, but it also allows us to see the JavaScript code of the website we are at. This can be useful in finding any hidden flags in the JavaScript code, or even finding any vulnerabilities in the JavaScript code. Most of the times, the JS code in the debugger will be compact, to save space. As a result, there is normally a Pretty print button at the bottom of the debugger, which looks like two curly braces. This will allow you to see the code in a more readable format.
 
-![An Image of Breakpoints](Images/Breakpoint.png)
-*Breakpoint in Debugger*
+![An Image of Breakpoints](Images/Breakpoint.png) _Breakpoint in Debugger_
 
 If you click on a line of code, it will turn blue. This is a breakpoint, which will stop the code from running at that line. If you press the play button, the code will run until it reaches the breakpoint, where it will stop and also allow you to see any defined variables and its values. If you press the play button again, the code will run until it reaches the next breakpoint. This is useful for finding any bugs in the code.
 
@@ -42,7 +40,7 @@ The console allows someone to write custom JavaScript code to run on the webpage
 
 ### Network
 
-The Network tab allows us to see all the external requests made by a webpage. Each row represents a resource which was requested. The status column shows the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), the initiator column shows what requested the resource. Clicking on the row can show us the [HTTP request](https://www.ibm.com/docs/en/cics-ts/5.3?topic=protocol-http-requests) of it, which can be edited in Firefox only. This can be used while doing forms to change where the form results are sent (form endpoints). You can also write new requests. By right clicking on a row, you can copy the request as a [cURL](https://developer.ibm.com/articles/what-is-curl-command/) command or [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) method, which can be used in the terminal or console respectively to send requests.
+The Network tab allows us to see all the external requests made by a webpage. Each row represents a resource which was requested. The status column shows the [HTTP response code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), the initiator column shows what requested the resource. Clicking on the row can show us the [HTTP request](https://www.ibm.com/docs/en/cics-ts/5.3?topic=protocol-http-requests) of it, which can be edited in Firefox only. This can be used while doing forms to change where the form results are sent (form endpoints). You can also write new requests. By right clicking on a row, you can copy the request as a [cURL](https://developer.ibm.com/articles/what-is-curl-command/) command or [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch\_API/Using\_Fetch) method, which can be used in the terminal or console respectively to send requests.
 
 [Here](https://youtu.be/3W65ji1gc8c?t=994) is a good video for more in-depth information on the Dev Tools.
 
@@ -52,9 +50,9 @@ The Network tab allows us to see all the external requests made by a webpage. Ea
 
 A URL is an address to a certain resource. This resource can be a HTML page, image and other files. The anatomy of a URL is important to understand, especially to learn about directory traversal.
 
-![Image of URL anatomy](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL/mdn-url-all.png)
+![Image of URL anatomy](https://developer.mozilla.org/en-US/docs/Learn/Common\_questions/What\_is\_a\_URL/mdn-url-all.png)
 
-Read this [this guide](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL) on URL anatomy.
+Read this [this guide](https://developer.mozilla.org/en-US/docs/Learn/Common\_questions/What\_is\_a\_URL) on URL anatomy.
 
 ### Path and Parameters
 
@@ -62,7 +60,7 @@ The most important part of URLs is the path. The path is the part of the URL tha
 
 Some important files to possible check is the `/etc/shadow` file, which contains the password hashes of all the users on the server. This can be used to [break the password hashes](https://null-byte.wonderhowto.com/how-to/crack-shadow-hashes-after-getting-root-linux-system-0186386/) and gain access to the server. Another important file is the `/etc/passwd` file, which contains the usernames and passwords of all the users on the server.
 
-Let us look at an [example](https://vm-thijs.ewi.utwente.nl/ctf/traversal.asp?page=index.html),  
+Let us look at an [example](https://vm-thijs.ewi.utwente.nl/ctf/traversal.asp?page=index.html),
 
 ![An Image of webpage](Images/Index.png)
 
@@ -74,9 +72,9 @@ It worked! We can now navigate to any directory we want. Now try to see if you c
 
 ### Cookies
 
-Cookies, which are in the [Storage tab](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/), can also reference certain directories, which can be exploited by doing a Directory Traversal attack as shown above. This can be done by changing the value of the cookie to a path that you want to navigate to.
+Cookies, which are in the [Storage tab](https://firefox-source-docs.mozilla.org/devtools-user/storage\_inspector/), can also reference certain directories, which can be exploited by doing a Directory Traversal attack as shown above. This can be done by changing the value of the cookie to a path that you want to navigate to.
 
-Read this [chapter](https://owasp.org/www-community/attacks/Path_Traversal) by OWASP on Directory Traversal to get more examples and find out ways to prevent it.\
+Read this [chapter](https://owasp.org/www-community/attacks/Path\_Traversal) by OWASP on Directory Traversal to get more examples and find out ways to prevent it.\
 If you want to go more in-depth and also want to learn about BurpSuite, read this [guide](https://portswigger.net/web-security/file-path-traversal) by PortSwigger.
 
 ## Command Injection
@@ -88,8 +86,7 @@ How do we detect if command injection is possible? Let us use `https://website/e
 We can insert special characters to see if the application blocks anything that could be used for command injection, such as `&`, `;`, `|`. It no error is given, we can try to put our own commands in after the delimiter: `https://website/endpoint?parameter=1|whoami`.\
 `whoami` is a command in both Linux and Windows, and outputs the username of the user. However, most of the times, command injection is blind and does not give any output. For that we can try to put a time delay, such as `https://vulnerable-website/endpoint?parameter=x||ping+-c+10+127.0.0.1||`. This will ping the localhost 10 times, which will take 10 seconds. If the website takes more than 10 seconds to load, we can assume that command injection is possible.
 
-There are even more methods to do command injection, such as file upload.
-Read this [chapter](https://owasp.org/www-community/attacks/Command_Injection) by OWASP, this [guide](https://portswigger.net/web-security/os-command-injection) by PortSwigger and this [tutorial](https://book.hacktricks.xyz/pentesting-web/command-injection). If you prefer videos, this [video](https://www.youtube.com/watch?v=UBWMLFbjPBc) is very helpful, with [this](https://www.youtube.com/watch?v=9XY2abdWADQ) being more in-depth.
+There are even more methods to do command injection, such as file upload. Read this [chapter](https://owasp.org/www-community/attacks/Command\_Injection) by OWASP, this [guide](https://portswigger.net/web-security/os-command-injection) by PortSwigger and this [tutorial](https://book.hacktricks.xyz/pentesting-web/command-injection). If you prefer videos, this [video](https://www.youtube.com/watch?v=UBWMLFbjPBc) is very helpful, with [this](https://www.youtube.com/watch?v=9XY2abdWADQ) being more in-depth.
 
 ## SQL Injection
 
@@ -109,7 +106,7 @@ Try studying SQL Injection yourself. Don't worry, we will provide you with some 
 
 Go to these sites and try some questions. Do not be discouraged if you cannot solve them, as it is a learning process. If you do not understand something, such as what is cuRL, do not be afraid to google and learn new things. If you are stuck, try to look as the hints, but even after that you are still stuck, search online for writeups for the problem. [This](https://www.hackthebox.com/blog/It-is-Okay-to-Use-Writeups) is a good article on why it is okay to use writeups.
 
-* [PicoGym Web](https://play.picoctf.org/practice?category=1&page=1)
+* [PicoGym Web](https://play.picoctf.org/practice?category=1\&page=1)
 * [Root Me Web Client](https://www.root-me.org/en/Challenges/Web-Client/)
 * [Hacker101 CTF](https://ctf.hacker101.com/)
 * [HackThisSite (Try Basic, Realistic and JavaScript)](https://www.hackthissite.org/)
@@ -121,5 +118,5 @@ Go to these sites and try some questions. Do not be discouraged if you cannot so
 * [CTF Checklist](https://fareedfauzi.gitbook.io/ctf-checklist-for-beginner/web)
 * [List of useful payloads](https://github.com/swisskyrepo/PayloadsAllTheThings)
 * [Hash payloads](https://github.com/danielmiessler/SecLists)
-* [wechall.net](https://www.wechall.net/active_sites)
+* [wechall.net](https://www.wechall.net/active\_sites)
 * [wechall challenges](https://www.wechall.net/challs/)
