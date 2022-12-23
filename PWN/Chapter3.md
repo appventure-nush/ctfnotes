@@ -64,11 +64,10 @@ Some good resources to learn Pwntools are:
 Go to these sites and try some questions. Do not be discouraged if you cannot solve them, as it is a learning process. If you do not understand something, such as what is cuRL, do not be afraid to google and learn new things. If you are stuck, try to look as the hints, but even after that you are still stuck, search online for writeups for the problem. [This](https://www.hackthebox.com/blog/It-is-Okay-to-Use-Writeups) is a good article on why it is okay to use writeups.
 
 * [PicoGym Binary Exploitation](https://play.picoctf.org/practice?category=6&page=1)
-* [Root Me Cracking](https://www.root-me.org/en/Challenges/Cracking/)
 * [pwnable.xyz](https://pwnable.xyz/challenges/)
 * [pwnable.tw](https://pwnable.tw/)
 * [OverTheWire Narnia](https://overthewire.org/wargames/narnia/)
-* [pwn.college](https://pwn.college/)
+* [pwn.college](https://dojo.pwn.college/)
 * [W3Challs](https://w3challs.com/challenges/list/pwn)
 * [Pheonix](https://exploit-exercises.com/phoenix/)
 * [Microcorruption](https://microcorruption.com)

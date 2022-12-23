@@ -111,6 +111,7 @@ Go to these sites and try some questions. Do not be discouraged if you cannot so
 * [Hacker101 CTF](https://ctf.hacker101.com/)
 * [HackThisSite (Try Basic, Realistic and JavaScript)](https://www.hackthissite.org/)
 * [OverTheWire Natas](https://overthewire.org/wargames/natas/)
+* [W3Challs](https://w3challs.com/challenges/list/web)
 
 ## Additional Resources
 
