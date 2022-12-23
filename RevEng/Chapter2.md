@@ -14,13 +14,13 @@ A [disassembler](https://ctf101.org/reverse-engineering/what-are-disassemblers/)
 
 Assembly language is a low-level programming language that is used to write instructions for a computer's processor. It is a symbolic representation of machine code, which consists of a series of binary digits that the processor can understand and execute. Each assembly instruction corresponds to a specific machine code instruction, so when an assembly program is compiled, the assembly instructions are translated into machine code that the processor can execute. We will be going through x86-64 assembly, which is the most common assembly language used in modern computers.
 
-We will see some Assembly commands for some simple code, which is written in C++ (should be similar to Java). However, before going through the examples, we should go through some of the memory management in a program.
+We will see some Assembly intructions for some simple code, which is written in C++ (should be similar to Java). However, before going through the examples, we should go through some memory management basics.
 
 ### Program Stack
 
 A program stack is a data structure that is used by a computer program to store temporary data during the execution of the program. It is called a "stack" because it operates on the principle of Last In First Out (LIFO), which means that the last item added to the stack will be the first one to be removed.
 In a program, the stack is used to store a variety of information, such as function arguments, local variables, and return addresses. When a program calls a function, the function's arguments and local variables are pushed onto the stack, and when the function returns, the return value and the previous state of the program are popped off the stack.
-The stack is an important part of a computer's memory management system, as it allows a program to store and retrieve data in a very efficient way. It is a fundamental concept in computer science, and is used in many different types of programs and systems.
+The stack is an important part of a computer's memory management system, as it allows a program to store and retrieve data in a very efficient way.
 
 ### Base Pointer
 
@@ -86,8 +86,8 @@ Even though there are so many decompilers, we will only go through Ghidra as it 
 To run ghidra on Windows, run the ghidraRun.bat file, while on Linux and MacOS, run the ghidraRun file.
 Some good resources to learn Ghidra are:
 
-* [How to install Ghidra](https://youtu.be/Es3ebWUBiqc)
-* [How to navigate Ghidra](https://youtu.be/uS3Gd83eWJ4)
+* [How to install Ghidra (Video)](https://youtu.be/Es3ebWUBiqc)
+* [How to navigate Ghidra (Video)](https://youtu.be/uS3Gd83eWJ4)
 * [Ghidra Course](https://hackaday.io/course/172292-introduction-to-reverse-engineering-with-ghidra)
 * [Solving a simple crackme in Ghidra (Video)](https://www.youtube.com/watch?v=fTGTnrgjuGA)
 * [Breaking an embedded firmware encryption scheme (Video)](https://www.youtube.com/watch?v=4urMITJKQQs)
