@@ -1,3 +1,3 @@
 # CTF Notes
 
-The notes for the Appventure CTF division. This repository is mainly to do quality checking of these notes, and also as a secondary storage of them
+This notes are from the Appventure CTF Division. This is mainly for the Taste Test, but will eventually be extended to the streams.
